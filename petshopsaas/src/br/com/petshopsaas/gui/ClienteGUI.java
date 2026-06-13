@@ -21,6 +21,7 @@ public class ClienteGUI extends SimpleCrudFrame<Cliente> {
 		addField("CPF", cpf);
 		addField("Endereço", endereco);
 		addField("PetShop ID", petShopId);
+		inicializarTela();
 	}
 
 	protected Cliente criarObjetoDoFormulario() {
