@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Diagrama UML PetShop SaaS</title></head>
+<body>
+<!-- Arquivo HTML contendo XML diagrams.net/draw.io. Caso o draw.io não importe diretamente este HTML, abra o arquivo .drawio incluído no ZIP. -->
+
+<mxfile host="app.diagrams.net" modified="2026-06-12T00:00:00.000Z" agent="ChatGPT" version="26.0.0" type="device">
+  <diagram name="UML PetShop SaaS" id="uml-petshop-saas">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="sec1" value="Enums" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="10" width="120" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sec2" value="Entidades / Model" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="185" width="180" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sec3" value="DAO / Persistência" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1065" width="200" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sec4" value="GUI / Swing" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1335" width="160" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sec5" value="Services" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1675" width="120" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="TipoUsuario" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TipoUsuario&lt;/b&gt;&lt;hr&gt;ADMIN&lt;br&gt;CLIENTE&lt;br&gt;FUNCIONARIO&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="TipoServico" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TipoServico&lt;/b&gt;&lt;hr&gt;BANHO&lt;br&gt;TOSA&lt;br&gt;BANHO_E_TOSA&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="40" width="160" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="StatusAssinatura" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;StatusAssinatura&lt;/b&gt;&lt;hr&gt;ATIVA&lt;br&gt;CANCELADA&lt;br&gt;SUSPENSA&lt;br&gt;EXPIRADA&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="180" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="StatusAgendamento" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;StatusAgendamento&lt;/b&gt;&lt;hr&gt;AGENDADO&lt;br&gt;CONCLUIDO&lt;br&gt;CANCELADO&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="180" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="StatusPagamento" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;StatusPagamento&lt;/b&gt;&lt;hr&gt;PENDENTE&lt;br&gt;PAGO&lt;br&gt;ATRASADO&lt;br&gt;CANCELADO&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="40" width="180" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="EspeciePet" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;EspeciePet&lt;/b&gt;&lt;hr&gt;CACHORRO&lt;br&gt;GATO&lt;br&gt;OUTRO&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="40" width="160" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="Usuario" value="&lt;b&gt;Usuario&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- email: String&lt;br&gt;- senha: String&lt;br&gt;- telefone: String&lt;br&gt;- tipoUsuario: TipoUsuario&lt;br&gt;&lt;hr&gt;+ login()&lt;br&gt;+ logout()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="220" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="Cliente" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;hr&gt;- cpf: String&lt;br&gt;- endereco: String&lt;br&gt;&lt;hr&gt;+ cadastrarPet(pet: Pet)&lt;br&gt;+ visualizarAssinatura()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="220" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="Funcionario" value="&lt;b&gt;Funcionario&lt;/b&gt;&lt;hr&gt;- cargo: String&lt;br&gt;- especialidade: String&lt;br&gt;&lt;hr&gt;+ atenderAgendamento(agendamento: Agendamento)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="300" y="490" width="250" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="PetShop" value="&lt;b&gt;PetShop&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- cnpj: String&lt;br&gt;- endereco: String&lt;br&gt;- telefone: String&lt;br&gt;&lt;hr&gt;+ cadastrarPlano(plano: Plano)&lt;br&gt;+ cadastrarFuncionario(funcionario: Funcionario)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="260" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="Pet" value="&lt;b&gt;Pet&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- especie: EspeciePet&lt;br&gt;- raca: String&lt;br&gt;- idade: int&lt;br&gt;- peso: double&lt;br&gt;- observacoes: String&lt;br&gt;&lt;hr&gt;+ atualizarDados()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="690" width="230" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="Plano" value="&lt;b&gt;Plano&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- descricao: String&lt;br&gt;- valorMensal: double&lt;br&gt;- quantidadeBanhos: int&lt;br&gt;- quantidadeTosas: int&lt;br&gt;- ativo: boolean&lt;br&gt;&lt;hr&gt;+ ativar()&lt;br&gt;+ desativar()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="610" y="220" width="250" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="Assinatura" value="&lt;b&gt;Assinatura&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- dataInicio: LocalDate&lt;br&gt;- dataFim: LocalDate&lt;br&gt;- status: StatusAssinatura&lt;br&gt;- banhosRestantes: int&lt;br&gt;- tosasRestantes: int&lt;br&gt;&lt;hr&gt;+ consumirBanho()&lt;br&gt;+ consumirTosa()&lt;br&gt;+ renovar()&lt;br&gt;+ cancelar()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="610" y="510" width="260" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="Servico" value="&lt;b&gt;Servico&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- nome: String&lt;br&gt;- tipoServico: TipoServico&lt;br&gt;- valorAvulso: double&lt;br&gt;- duracaoMinutos: int&lt;br&gt;&lt;hr&gt;+ calcularValor()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="920" y="220" width="230" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="Agendamento" value="&lt;b&gt;Agendamento&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- dataHora: LocalDateTime&lt;br&gt;- status: StatusAgendamento&lt;br&gt;- observacoes: String&lt;br&gt;&lt;hr&gt;+ confirmar()&lt;br&gt;+ cancelar()&lt;br&gt;+ concluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="920" y="500" width="250" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="Pagamento" value="&lt;b&gt;Pagamento&lt;/b&gt;&lt;hr&gt;- id: int&lt;br&gt;- dataPagamento: LocalDate&lt;br&gt;- dataVencimento: LocalDate&lt;br&gt;- valor: double&lt;br&gt;- status: StatusPagamento&lt;br&gt;- formaPagamento: String&lt;br&gt;&lt;hr&gt;+ confirmarPagamento()&lt;br&gt;+ cancelarPagamento()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="610" y="830" width="260" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="GenericDAO" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;GenericDAO&amp;lt;T&amp;gt;&lt;/b&gt;&lt;hr&gt;+ salvar(objeto: T)&lt;br&gt;+ atualizar(objeto: T)&lt;br&gt;+ deletar(id: int)&lt;br&gt;+ buscarPorId(id: int): T&lt;br&gt;+ listarTodos(): List&amp;amp;lt;T&amp;amp;gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1100" width="260" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="UsuarioDAO" value="&lt;b&gt;UsuarioDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1100" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ClienteDAO" value="&lt;b&gt;ClienteDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1100" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="FuncionarioDAO" value="&lt;b&gt;FuncionarioDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1100" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="PetDAO" value="&lt;b&gt;PetDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1100" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="PetShopDAO" value="&lt;b&gt;PetShopDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="1100" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="PlanoDAO" value="&lt;b&gt;PlanoDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1200" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="AssinaturaDAO" value="&lt;b&gt;AssinaturaDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1200" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ServicoDAO" value="&lt;b&gt;ServicoDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1200" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="AgendamentoDAO" value="&lt;b&gt;AgendamentoDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1200" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="PagamentoDAO" value="&lt;b&gt;PagamentoDAO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="1200" width="145" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="UsuarioGUI" value="&lt;b&gt;UsuarioGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1370" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="ClienteGUI" value="&lt;b&gt;ClienteGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1370" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="FuncionarioGUI" value="&lt;b&gt;FuncionarioGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1370" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="PetGUI" value="&lt;b&gt;PetGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1370" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="PetShopGUI" value="&lt;b&gt;PetShopGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1370" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="PlanoGUI" value="&lt;b&gt;PlanoGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1525" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="AssinaturaGUI" value="&lt;b&gt;AssinaturaGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ criarAssinatura()&lt;br&gt;+ renovarAssinatura()&lt;br&gt;+ cancelarAssinatura()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1525" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="ServicoGUI" value="&lt;b&gt;ServicoGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ cadastrar()&lt;br&gt;+ editar()&lt;br&gt;+ excluir()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1525" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="AgendamentoGUI" value="&lt;b&gt;AgendamentoGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ criarAgendamento()&lt;br&gt;+ cancelarAgendamento()&lt;br&gt;+ concluirAgendamento()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1525" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="PagamentoGUI" value="&lt;b&gt;PagamentoGUI&lt;/b&gt;&lt;hr&gt;+ exibirTela()&lt;br&gt;+ registrarPagamento()&lt;br&gt;+ cancelarPagamento()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1525" width="205" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="AssinaturaService" value="&lt;b&gt;AssinaturaService&lt;/b&gt;&lt;hr&gt;+ criarAssinatura(cliente: Cliente, plano: Plano): Assinatura&lt;br&gt;+ renovarAssinatura(assinatura: Assinatura)&lt;br&gt;+ cancelarAssinatura(assinatura: Assinatura)&lt;br&gt;+ verificarLimiteDisponivel(assinatura: Assinatura, servico: Servico): boolean&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1710" width="390" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="AgendamentoService" value="&lt;b&gt;AgendamentoService&lt;/b&gt;&lt;hr&gt;+ criarAgendamento(pet: Pet, servico: Servico, funcionario: Funcionario, dataHora: LocalDateTime): Agendamento&lt;br&gt;+ concluirAgendamento(agendamento: Agendamento)&lt;br&gt;+ cancelarAgendamento(agendamento: Agendamento)&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1710" width="520" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="PagamentoService" value="&lt;b&gt;PagamentoService&lt;/b&gt;&lt;hr&gt;+ gerarPagamento(assinatura: Assinatura): Pagamento&lt;br&gt;+ confirmarPagamento(pagamento: Pagamento)&lt;br&gt;+ verificarPagamentosAtrasados()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="1710" width="330" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_inh_cliente" value="extends" style="endArrow=block;endFill=0;html=1;rounded=0;" edge="1" parent="1" source="Cliente" target="Usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_inh_func" value="extends" style="endArrow=block;endFill=0;html=1;rounded=0;" edge="1" parent="1" source="Funcionario" target="Usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_UsuarioDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="UsuarioDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_ClienteDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="ClienteDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_FuncionarioDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="FuncionarioDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_PetDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PetDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_PetShopDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PetShopDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_PlanoDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PlanoDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_AssinaturaDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AssinaturaDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_ServicoDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="ServicoDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_AgendamentoDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AgendamentoDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="impl_PagamentoDAO" value="implements" style="endArrow=block;endFill=0;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PagamentoDAO" target="GenericDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_UsuarioDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="UsuarioDAO" target="Usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_ClienteDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="ClienteDAO" target="Cliente">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_FuncionarioDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="FuncionarioDAO" target="Funcionario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_PetDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PetDAO" target="Pet">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_PetShopDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PetShopDAO" target="PetShop">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_PlanoDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PlanoDAO" target="Plano">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_AssinaturaDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AssinaturaDAO" target="Assinatura">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_ServicoDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="ServicoDAO" target="Servico">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_AgendamentoDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AgendamentoDAO" target="Agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="dep_PagamentoDAO" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PagamentoDAO" target="Pagamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_UsuarioGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="UsuarioGUI" target="UsuarioDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_ClienteGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="ClienteGUI" target="ClienteDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_FuncionarioGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="FuncionarioGUI" target="FuncionarioDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_PetGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PetGUI" target="PetDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_PetShopGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PetShopGUI" target="PetShopDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_PlanoGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PlanoGUI" target="PlanoDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_AssinaturaGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AssinaturaGUI" target="AssinaturaDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_ServicoGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="ServicoGUI" target="ServicoDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_AgendamentoGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AgendamentoGUI" target="AgendamentoDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_PagamentoGUI" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PagamentoGUI" target="PagamentoDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_petshop_func" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="PetShop" target="Funcionario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_petshop_plano" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="PetShop" target="Plano">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_petshop_cliente" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="PetShop" target="Cliente">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_cliente_pet" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Cliente" target="Pet">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_cliente_ass" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Cliente" target="Assinatura">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_plano_ass" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Plano" target="Assinatura">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_ass_pag" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Assinatura" target="Pagamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_pet_ag" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Pet" target="Agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_func_ag" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Funcionario" target="Agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_serv_ag" value="1  —  0..*" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Servico" target="Agendamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_ag_ass" value="0..1  —  1" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="Agendamento" target="Assinatura">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_ass_dao" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AssinaturaService" target="AssinaturaDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_ag_dao" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AgendamentoService" target="AgendamentoDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_pag_dao" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PagamentoService" target="PagamentoDAO">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_ass_srv" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AssinaturaGUI" target="AssinaturaService">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_ag_srv" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="AgendamentoGUI" target="AgendamentoService">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="gui_pag_srv" value="usa" style="endArrow=open;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="PagamentoGUI" target="PagamentoService">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+</body>
+</html>
