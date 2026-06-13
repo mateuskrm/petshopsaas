@@ -24,6 +24,7 @@ public class AssinaturaGUI extends SimpleCrudFrame<Assinatura> {
 		addField("Status", status);
 		addField("Banhos restantes", banhos);
 		addField("Tosas restantes", tosas);
+		inicializarTela();
 	}
 
 	protected Assinatura criarObjetoDoFormulario() {
